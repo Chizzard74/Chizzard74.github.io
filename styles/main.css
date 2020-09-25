@@ -1,0 +1,33 @@
+<style>
+
+    body {
+        background-color: lightcyan;
+        border-style: solid;
+        padding: 4px;
+    }
+
+    div {
+        background-color: magenta;
+
+    }
+
+
+
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        color: greenyellow;
+        border: black;
+        background-color: lightskyblue
+    }
+
+    #greet {
+        border: black 10px;
+    }
+
+    p {
+        border: yellow;
+        padding: 10px;
+        background-color:green;
+    
+    }
+</style>
