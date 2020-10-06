@@ -1,0 +1,58 @@
+* {
+    margin: 0; padding: 0; border: 0; box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: #456;
+    color: cornflowerblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: #222;
+    margin: 1em;
+    text-align: center;
+    
+}
+
+#waterfall {
+    float: right;
+    height: 250px;
+    width: 150px;
+    border-radius: 8px;
+    margin: 1em 0 1em 1em;
+}
+
+#waterfall + p {
+    border-left: 5px solid #FFC;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+nav {
+    border: 1px solid red;
+    margin: 1em auto;
+    width: 80%;
+    clear: right;
+
+}
+
+nav a {
+    color: #EEE;
+    font-weight: bold;
+    padding: .5em 1em;
+    text-decoration: none;
+    font-size: 110%;
+}
+
+nav a:hover {
+    color: #465
+}
+
+h2 {
+    margin-top: 2em;
+    border-top: 1px solid #222;
+    
+}
