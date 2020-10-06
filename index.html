@@ -1,6 +1,27 @@
 <!doctype html>
 <!-- Thank you to Yong Bakos - Oregon State Cascades -->
 
+<!--the folowing is my awnser to pset 3
+  s = 'djhfbeuskshfuiabceaksudfre'
+compare = []
+length = len(s)
+
+//first element saved into a compare list
+collect = s[0]
+
+for i in range(1,length):
+   if s[i-1] <= s[i]:
+      collect += s[i]
+   else:
+      compare.append(collect)
+      collect = s[i]
+
+#last element must be added to compare
+compare.append(collect)
+      
+
+print(max(compare, key=len))-->
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -81,7 +102,7 @@
           
           <div class="col-md-2">
             <h2>Python Programs</h2>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="python/index.html" role="button">View details &raquo;</a></p>
           </div>
           
           <div class="col-md-2">
