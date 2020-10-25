@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Degree Pathways</title>
+  <link rel="stylesheet" href="styles/compscistyle2.css">
+
+    
+  </head>
+
+  <body>
+      
+      <div id="container">
+    
+            <h1>ASU Option: <button id="asubtn"><a href="https://docs.google.com/document/d/1PzpDusmKrvVs6aRT47WScEcw45TYFCsd62avfiLTQYA/edit?usp=sharing">Click Me</a></button>
+            </h1>
+            
+   
+  <br/>
+        
+                <h1  id="osuh1">OSU Option : <button id="asubtn"><a href="https://docs.google.com/document/d/1PzpDusmKrvVs6aRT47WScEcw45TYFCsd62avfiLTQYA/edit?usp=sharing">Click Me</a></button>
+                </h1>
+    
+        </div>
+        <div id="rightblock">
+            <p id="city-1">Arizona State University</p>
+            <a onmouseover="swapAsu()" onmouseout="resetAsu()" href="https://docs.google.com/document/d/1PzpDusmKrvVs6aRT47WScEcw45TYFCsd62avfiLTQYA/edit?usp=sharing"><img id="asu" src="../images/asu_school.jpg"></a>
+            
+    
+        </div>
+        
+        <div id="leftblock">
+            <p id="city-2">Oregon State Cascades University</p>
+            <a  onmouseover="swapOsu()" onmouseout="resetOsu()"> <img id="osu" src="../images/osu.jpg"></a>
+            
+        </div>
+        <script>
+            function swapAsu() {
+                let pic = document.getElementById("asu");
+                let swapped = pic.src="../images/asu.jpg";
+                return swapped;
+            };
+
+            
+            function resetAsu() {
+                let pic = document.getElementById("asu");
+                let swapped = pic.src="../images/asu_school.jpg";
+                return swapped;
+            }
+
+            function swapOsu() {
+                let pic = document.getElementById("osu");
+                let swapped = pic.src="../images/osu.jpg";
+                return swapped;
+            };
+
+            
+            function resetOsu() {
+                let pic = document.getElementById("osu");
+                let swapped = pic.src="../images/osu_school.jpg";
+                return swapped;
+            }
+
+
+        </script>
+</body>
+</html>

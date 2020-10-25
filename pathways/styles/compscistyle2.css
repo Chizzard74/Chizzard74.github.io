@@ -1,0 +1,108 @@
+* {
+    margin: 0; padding: 0; border: 0; box-sizing: border-box;
+}
+header {
+    color: rgb(36, 12, 12);
+    border-style: inset;
+    background-image: linear-gradient(silver, grey, white);
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 2px #444;
+    
+    
+    
+}
+
+body{
+    background-color: rgba(116, 117, 98, 0.582);
+    padding: 5px;
+}
+#container {
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+}
+
+h1 {
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    background-color: rgb(102, 82, 82);
+    color: rgb(151, 155, 145);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    
+}
+
+#asubtn {
+    font-size: 14pt;
+    font-weight: bold;
+    min-width: 140px;
+    min-height: 50px;
+    background-color:rgb(255, 242, 122);
+    border: 2px solid #222;
+    box-shadow: 2px 2px 2px #444;
+}
+#rightblock, #leftblock {
+    width: 50%;
+    height: 80vh;
+}
+
+#leftblock {
+  background-color: pink;
+  float: left;
+ 
+  background-size: cover ;
+  
+}
+
+img {
+    width: 100%;
+    height: 100%;;
+}
+
+#rightblock {
+  background-color: skyblue;
+  float: right;
+  position: relative;
+ 
+  
+ 
+  
+
+}
+
+#city-1, #city-2 {
+  position: relative;
+  top: 0px;
+text-align: center;
+color: #666666;
+font-size: 20pt;
+text-transform: uppercase;
+letter-spacing: .2em;
+
+}
+
+
+
+
+
+
+
+header {
+  background-color: black;
+  color: lightslategray;
+  width: 100vw; height: 50px;
+  position: fixed;
+  left: 0px; top: 710px;
+  z-index: 10;
+  text-align: center;
+}
+
+
+#trademark{
+ 
+  position: relative;
+  top: 9px;
+
+}
