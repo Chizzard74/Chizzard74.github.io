@@ -67,3 +67,8 @@ button, input[type=button]{
     
 }
 
+#img1{
+    background-image: url(../extra_credit_1.jpg);
+    height: 300px; width: 500px;
+    background-size: cover;
+}

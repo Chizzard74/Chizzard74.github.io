@@ -1,0 +1,34 @@
+Greenfoot run started: Thu Nov 05 14:44:39 PST 2020
+Greenfoot version: 3.6.1
+Java version 11.0.2
+JavaFX version 11.0.2+1
+Virtual machine: OpenJDK 64-Bit Server VM 11.0.2+9 (Oracle Corporation)
+Running on: Windows 10 10.0 (amd64)
+Java Home: C:\Program Files\Greenfoot\jdk
+----
+Opening project: C:\Users\Max\greenfoot\First Scenario
+1604617627702: Listening for JDWP connection on address: javadebug
+Connected to debug VM via dt_shmem transport...
+Communication with debug VM fully established.
+java.io.FileNotFoundException while reading import cache: C:\Users\Max\greenfoot\import-cache.xml (The system cannot find the file specified)
+Nov 05, 2020 3:15:06 PM javafx.scene.CssStyleHelper calculateValue
+WARNING: Could not resolve '-fx-text-background-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Greenfoot/lib/javafx/lib/javafx.controls.jar!/com/sun/javafx/scene/control/skin/modena/modena.bss
+====
+
+====
+Greenfoot run started: Thu Nov 05 16:00:56 PST 2020
+Greenfoot version: 3.6.1
+Java version 11.0.2
+JavaFX version 11.0.2+1
+Virtual machine: OpenJDK 64-Bit Server VM 11.0.2+9 (Oracle Corporation)
+Running on: Windows 10 10.0 (amd64)
+Java Home: C:\Program Files\Greenfoot\jdk
+----
+Opening project: C:\Users\Max\greenfoot\First Scenario
+1604620859887: Listening for JDWP connection on address: javadebug
+Connected to debug VM via dt_shmem transport...
+Communication with debug VM fully established.
+Opening project: C:\Users\Max\greenfoot\CIS 160
+1604620902135: Listening for JDWP connection on address: javadebug
+Connected to debug VM via dt_shmem transport...
+Communication with debug VM fully established.

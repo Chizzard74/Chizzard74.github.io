@@ -70,7 +70,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>carry_in</string>
+          <string>Carry_in</string>
         </entry>
       </elementAttributes>
       <pos x="580" y="420"/>
@@ -98,7 +98,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>b</string>
+          <string>b_4</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -168,7 +168,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>a</string>
+          <string>a_4</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -186,7 +186,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>carry_out</string>
+          <string>Carry_out</string>
         </entry>
       </elementAttributes>
       <pos x="-260" y="720"/>
