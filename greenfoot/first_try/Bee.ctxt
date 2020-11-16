@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Bee
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ bee\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Bee()
+comment1.text=\r\n\ Bee\ constructor,\ called\ when\ 'new'\ is\ used\r\n
+comment2.params=
+comment2.target=void\ act()
+numComments=3

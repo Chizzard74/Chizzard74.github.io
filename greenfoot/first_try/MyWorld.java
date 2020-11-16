@@ -27,9 +27,13 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        butter_fly butter_fly = new butter_fly();
+        Butter_fly butter_fly = new Butter_fly();
         addObject(butter_fly,51,81);
-        butter_fly butter_fly2 = new butter_fly();
+        Butter_fly butter_fly2 = new Butter_fly();
         addObject(butter_fly2,125,117);
+        Bee bee = new Bee();
+        addObject(bee,408,194);
+        Dolphin dolphin = new Dolphin();
+        addObject(dolphin,364,329);
     }
 }
