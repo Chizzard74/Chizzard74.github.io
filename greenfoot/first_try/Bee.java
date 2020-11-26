@@ -6,8 +6,10 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Bee extends Actor
+public class Bee extends Flitter
 {
+    private boolean toggle;
+    private int butterFlyCounter = 0;
     /**
      * Act - do whatever the bee wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -27,14 +29,33 @@ public class Bee extends Actor
     
     public void act() 
     {
-        List<Actor> targets = getObjectsInRange (100, Actor.class);
+        super.act();
         
+        List<ButterFly> targets = getObjectsInRange(170,ButterFly.class);
+        //are there any bees near by?
         if (targets.size() > 0) {
-           |DDDFASDFbutterFly = targets.get(0);
-            int x = butterFly.getx();
+            ButterFly butterFly = targets.get(0);
+            int x = butterFly.getX();
             int y = butterFly.getY();
             turnTowards(x,y);
-            move(8);
+            move(Greenfoot.getRandomNumber(7) + 4);
+            
+            if (isTouching(ButterFly.class)){
+                
+            removeTouching(ButterFly.class);
+            butterFlyCounter++;
+            
+            if (butterFlyCounter >= 6) {
+                World world = getWorld();
+                Bee bee = new Bee();
+                world.addObject(bee, getX(), getY());
+                butterFlyCounter = 0;
+             
         }
-    }    
+        toggle = !toggle;
+    }     
+    
+} 
+}
+
 }
