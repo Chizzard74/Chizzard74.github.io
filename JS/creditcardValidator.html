@@ -29,7 +29,7 @@
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Explore</a>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -68,17 +68,156 @@
       <!-- Main header-->
       <div class="jumbotron" >
         <div class="container" style="height: 130px;">
-          <h1 class="display-3">TITLE</h1>
-        </header>
-        <h1>TITLE</h1>
+          <h1 class="display-3">JavaScript Credit Card Validator</h1>
+          <h2>Credit Card Verification</h2>
+          
+              <ul>
+                  <li>The user is presented a form asking for a credit card number. The card number must be 16 digits without any non-numeric characters. If the user violates this rule, they are instructed to “enter a valid card number”. </li>
+
+                  <li>The entered number must be valid regarding the check digit (16th digit). The product of the first two digits must match the last digit. If the product of the first two digits is greater than 9, then the second digit (of the product) must match the last digit. <br>
+                  So, if the first two digits are 3 and 7 (product is 21), then the last digit in the credit card must be a 1.<br>
+                  If the first two digits are 3 and 2 (product is 6), then the last digit in the credit card must be a 6.</li>
+
+                  <li>In addition to this check, an appropriate credit card image is shown based on the credit card number. 
+                      <ul>
+                          <li>Visa cards begin with a 4.</li>
+                          <li>Mastercard begins with a 5.</li>
+                          <li>American Express cards begin with a 3 followed by a 4 or 7.</li>
+                      </ul></li>
+                      <li>
+                      If the user uses any of these three national cards, the appropriate image is shown when the user enters the first two digits.</li>
+
+                  <li>If any of the rules of the credit card entry are violated, the form process should be broken and the output area should display a message for the  user to "please re-enter your credit card number".</li>
+              </ul>
+
 
       <div style="background-color:beige;" class="container">
         <!-- Example row of columns -->
         <div class="row">
             <div> 
+                <section>
 
+                    <form method="post" id='form4' action="./formSubmitted.html">
+                            <label for="ccnumber">Card Number</label>
+                            <input onkeyup='imageDisplay()' type="text" id="ccnumber" name="ccnum">
+                                <br><br>
+                            <input type="submit" value="Submit">
+                        </form>
+    
+                    <p class="output" id="output-display">
+                    </p>
+                </section>
+                <div id='visaimg' style='display:none'>
+                    <a><img src='./images/visa.png'></a>
+                </div>
+                <div id='mastimg' style='display:none'>
+                    <a><img src='./images/mast.png'></a>
+                </div>
+                <div id='ameximg' style='display:none'>
+                    <a><img src='./images/amex.png'></a>
+                </div>
+    
              </div>
         <script>
+            let form4 = document.getElementById('form4');
+	let output = document.getElementById('output-display');
+
+	let visa = document.getElementById('visaimg');
+	let amex = document.getElementById('ameximg');
+	let mast = document.getElementById('mastimg');
+	let ccvalue = document.getElementById('ccnumber');
+
+
+	//image display
+	function imageDisplay(){
+
+		if(ccvalue.value.length < 1){
+			visa.style.display='none';
+			mast.style.display='none';
+			amex.style.display='none';
+		}
+
+		if(ccvalue.value.charAt(0) == 4){
+			visa.style.display='block';
+			mast.style.display='none';
+			amex.style.display='none';
+		}
+	
+
+		if(ccvalue.value.charAt(0) == 5){
+			mast.style.display='block';
+			visa.style.display='none';
+			amex.style.display='none';
+		}
+
+		
+		if(ccvalue.value.charAt(0) == 3 && ccvalue.value.charAt(1) == 4 || ccvalue.value.charAt(1) == 7){
+			mast.style.display='none';
+			visa.style.display='none';
+			amex.style.display='block';
+		}
+
+
+		
+		
+
+
+
+	}
+
+	//form submission
+	form4.onsubmit = function() {
+
+		//16 digits with all numerical chars
+		let ccnum = document.getElementById('ccnumber');
+
+		let pattern = /['a-z']/i;
+		let error = 0;
+
+		
+		if(ccnum.value.length != 16) {
+			error ++;
+			output.innerHTML = 'Card number must be 16 digits long!';
+		}
+
+		
+		if(ccnum.value.search(pattern) !== -1){
+		error ++;
+		output.innerHTML='Please only use numbers!';
+		}
+		
+		//this gets the last digit
+		let lastNum = Number(ccnum.value.charAt(ccnum.value.length -1));
+
+		// first digit
+	    let firstNum = Number(ccnum.value.charAt(0));
+		//second digit
+		let secondNum = Number(ccnum.value.charAt(1));
+
+		//this checks ccnum[0] * ccnum[1] = ccnum[-1]
+		if(firstNum * secondNum !== lastNum){
+			error ++;
+			output.innerHTML = "ValueError: product of first two digits must match last digit";
+		}
+		let result = firstNum * secondNum;
+		
+		let resultCheck = result % 10;
+
+		// this checks the last digit to the second digit if its over 9
+		if(result > 9){
+			if(resultCheck !== secondNum){
+				error ++;
+				output.innerHTML = 'ValueError: If product of first two digits is greater than 9, Second digit must match last digit';
+			}
+		}
+		//error checking
+		if(error > 0){
+				return false;
+				error = 0;
+		}
+
+	
+	}
 
         </script>
         
