@@ -65,21 +65,73 @@
 
     <main role="main">
 
-      <!-- Main header-->
+      
       <div class="jumbotron" >
         <div class="container" style="height: 130px;">
-          <h1 class="display-3">TITLE</h1>
+          <h1 class="display-3">Textbox Manipulation</h1>
         </header>
-        <h1>TITLE</h1>
+        <h2>Character Count and Profanity Filter</h2>
 
       <div style="background-color:beige;" class="container">
-        <!-- Example row of columns -->
+        
         <div class="row">
             <div> 
+                <h3>Counting Characters</h3>
+                <p>After 255 characters, the textbox will become red. <br>
+                   See what happens if you keep on typing.</p>
+                <div id='textdiv1'>
+                    <textarea onkeyup="showChars()" id='area1' rows='15' cols='50'  name='charcount'></textarea>
+                </div><p id='count'></p>
+                <button onclick="document.getElementById('area1').value = ''">Clear input field</button>
+            </div>
 
-             </div>
+            <!--This is added for space and design-->
+            <div>
+
+                    <div style="width: 300px;"></div>
+                
+            </div>
+
+            
+            <div>
+                <aside>
+                    <h4>Profanity Filter</h4>
+                    <textarea id='textarea' row='500' cols='40'></textarea>
+                    <button id='btn' onclick="showText()">Submit Text</button>
+                    <p><strong>Dopey | Sleepy | Sneezy | Happy | Doc | Bashful | Grumpy
+                    </strong> <br>
+                    Are all forbidden words, say them at your own risk.</p>
+                </aside>
+            </div>
         <script>
+            function showChars() {
+                let res1 = document.getElementById('count');
+                let textarea = document.getElementById('area1').value;
+                let count = Number(255);
 
+                res1.innerHTML=`${count - textarea.length} Characters Remaining!`;
+                
+                if(count - textarea.length <= 0) {
+                    document.getElementById('textdiv1').style='border: 4px solid red';
+
+                    document.getElementById('count').style='font-weight: bold; color: red';
+                }
+            }
+
+             // this grabs the text area
+             let textarea = document.getElementById('textarea');
+                        //this is the list of profanity
+                        let pattern1 = /(Dopey|Sleepy|Sneezy|Happy|Doc|Bashful|Grumpy)/gi;
+                
+                        function showText() {
+                            //if the text contains profanity
+                            if(textarea.value.search(pattern1) !== -1){
+                               //replace the value of the text with the updated pattern
+                                textarea.value = textarea.value.replace(pattern1, '!@#$%');
+                            }
+                          
+                        }
+            
         </script>
         
         </body>
